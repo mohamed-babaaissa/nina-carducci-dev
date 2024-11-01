@@ -48,6 +48,7 @@ body {
 	padding-inline: 100px;
 	padding-block: 100px;
 	position: relative;
+	min-height: 400px;
 }
 
 .picture.left::before {
@@ -142,6 +143,7 @@ body {
 	width: 70%;
 	margin: auto;
 	padding-block: 3em;
+	min-height: 200px;
 }
 .quote__text {
 	font-family: Spectral;
