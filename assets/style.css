@@ -41,6 +41,17 @@ body {
 	width: 22px;
 }
 
+#header {
+	min-height: 574px; /* Hauteur définie pour correspondre à la hauteur des images */
+	overflow: hidden; /* Évite les débordements pendant le chargement */
+}
+
+#carouselExampleIndicators img {
+	width: 100%;
+	max-height: 574px;
+	object-fit: cover;
+}
+
 #about {
 	display: flex;
 	background-color: #F6D2B8;
@@ -89,7 +100,7 @@ body {
 	font-size: 30px;
 }
 #about-me p {
-	width: 80%;
+	width: 100%;
 	font-size: 24px;
 	min-height: 80px;
 }
