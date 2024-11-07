@@ -27,7 +27,7 @@
 		</ul>
 	</nav>
 </header>
-<!-- <main> -->
+
 <section id="header">
 	<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 		<div class="carousel-indicators">
@@ -56,7 +56,7 @@
 		</button>
 	</div>
 </section>
-<section id="about">
+<main id="about">
 	<div class="picture left">
 		<img src="./assets/images/portrait-nina-carducci.webp" width="334" height="333" loading="lazy" alt="Portrait de Nina Carducci" title="Portrait de Nina Carducci, photographe spécialisée en portraits et événements">
 	</div>
@@ -66,7 +66,7 @@
 		<p>Nous passons notre vie à chercher le bonheur, et lorsque nous y touchons, nous n’avons qu’une envie : le figer au travers de photographies pour le savourer avec les personnes qui sont importantes à nos yeux, ou le partager au plus grand nombre.
 			C’est ce que je vous propose : saisir ces merveilleux moments au travers de mon regard, mon approche, ma technique. Rendre ces moments immortels, afin que vous puissiez y puiser de l’amour, du bonheur, de la tendresse et de lumière à chaque fois que vous poserez les yeux sur vos photos.</p>
 	</div>
-</section>
+</main>
 <section id="gallery">
 	<h2 class="title">Portfolio</h2>
 	<div class="container py-3">
@@ -97,7 +97,7 @@
 		<article class="service">
 			<div class="service__description">
 				<h3>Shooting photo</h3>
-				<p>Pour capturer vos moments les plus précieux et garder un souvenir impérissable. Je me déplace en Île-de-France pour réaliser vos photos</p>
+				<p  class="service__details">Pour capturer vos moments les plus précieux et garder un souvenir impérissable. Je me déplace en Île-de-France pour réaliser vos photos</p>
 			</div>
 			<div class="service__price">
 				<h4>350€/demi journée</h4>
@@ -107,7 +107,7 @@
 		<article class="service">
 			<div class="service__description">
 				<h3>Retouches</h3>
-				<p>Vous souhaitez retoucher vos photos pour un résultat professionnel ? Bénéficier d’un rendu optimal pour vos publications</p>
+				<p  class="service__details">Vous souhaitez retoucher vos photos pour un résultat professionnel ? Bénéficier d’un rendu optimal pour vos publications</p>
 			</div>
 			<div class="service__price">
 				<h4>50€/photo</h4>
@@ -134,7 +134,7 @@
 		<figcaption class="quote__author">- Richard Avedon</figcaption>
 	</figure>
 </div>
-<section id="contact">
+<footer id="contact">
 	
 	<div class="container">
 		<div class="form-container">
@@ -142,13 +142,13 @@
 			<p> N’hésitez pas à m’écrire ! Je vous répondrai en moins de 24 heures</p>
 			<form action="" method="post">
 				<label for="nom">Nom</label>
-				<input type="text" name="nom" id="nom" aria-label="Votre nom">
+				<input type="text" name="nom" id="nom" aria-label="Votre nom" required>
 
 				<label for="email">Email</label>
-				<input type="email" name="email" id="email" aria-label="Votre adresse email">
+				<input type="email" name="email" id="email" aria-label="Votre adresse email" required>
 
 				<label for="message">Message</label>
-				<textarea name="message" id="message" cols="30" rows="10" aria-label="Votre message"></textarea>
+				<textarea name="message" id="message" cols="30" rows="10" aria-label="Votre message" required></textarea>
 
 				<input type="submit" value="Envoyer"/>
 			</form>
@@ -157,8 +157,8 @@
 			<img src="./assets/images/photographie-camera.webp" width="326" height="324" loading="lazy" alt="Appareil photo" title="Appareil photo de photographe professionnel">
 		</div>
 	</div>
-</section>
-<!-- </main> -->
+</footer>
+
 <script src="./assets/bootstrap/bootstrap.bundle.min.js" defer></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" defer></script>
 <script src="./assets/maugallery.js" defer></script>

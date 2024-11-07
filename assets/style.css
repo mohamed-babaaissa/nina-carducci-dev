@@ -18,9 +18,6 @@ body {
 	align-items: center;
 }
 
-.top-header .name {
-	font-size: 26px;
-}
 
 .nav ul {
 	display: flex;
@@ -35,7 +32,8 @@ body {
 
 .nav a {
 	text-decoration: none;
-	color: #000
+	color: #000;
+	font-size: 2Opx;
 }
 
 .social-link img {
@@ -78,26 +76,24 @@ body {
 .about-me__title {
 	margin-top: 1em;
 	margin-bottom: 60px;
-	font-size: 30px;
+	font-size: 40px;
 }
 .about-me__introduction {
 	font-family: 'Spectral';
 	font-weight: 800;
 	font-style: italic;
-	width: 400px;
 	min-height: 2em; /* Ajustez en fonction du contenu attendu */
 }
 #about-me p {
 	width: 80%;
-	font-size: 14px;
+	font-size: 22px;
 }
 
-#gallery {
-	/*	min-height: 100vh; */
-}
+
 .title{
 	text-align: center;
 	padding-block: 2em;
+	font-size: 40px;
 }
 .gallery .nav {
 	justify-content: center;
@@ -108,7 +104,8 @@ body {
 	border-radius:0 ;
 }
 .nav-pills .nav-link {
-	color: #000
+	color: #000;
+	font-size: 20px;
 }
 .item-column {
 	position: relative;
@@ -185,7 +182,6 @@ body {
 	background-color: white;
 	max-width: 390px;
 	width: 30%;
-	height: 337px;
 	padding: 1em;
 	display: flex;
 	flex-direction: column;
@@ -257,7 +253,9 @@ input[type="submit"] {
 	.about-me__title {
 		margin-top: 0;
 		margin-bottom: 1em;
+		font-size: 40px;
 	}
+
 	#about-me h4, #about-me p {
 		width: 100%;
 	}
@@ -294,6 +292,7 @@ input[type="submit"] {
 		margin: 2em 0
 	}
 	.service__description{
+		flex: 1 1 auto;
 		margin-bottom: 1em;
 	}
 
