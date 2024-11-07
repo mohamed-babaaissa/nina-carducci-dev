@@ -3,7 +3,7 @@ body {
 	margin: auto;
 }
 * {
-	font-family: 'Inter';
+	font-family: Arial, sans-serif, 'Inter', 'Spectral';
 	font-style: normal;
 }
 .top-header {
@@ -24,6 +24,7 @@ body {
 	list-style-type: none;
 	font-size: 14px;
 	margin-bottom: 0;
+	font-size: 22px;
 }
 
 .nav li {
@@ -33,11 +34,11 @@ body {
 .nav a {
 	text-decoration: none;
 	color: #000;
-	font-size: 2Opx;
+	
 }
 
 .social-link img {
-	width: 20px;
+	width: 22px;
 }
 
 #about {
@@ -47,6 +48,7 @@ body {
 	padding-block: 100px;
 	position: relative;
 	min-height: 400px;
+	height: auto;
 }
 
 .picture.left::before {
@@ -77,22 +79,25 @@ body {
 	margin-top: 1em;
 	margin-bottom: 60px;
 	font-size: 40px;
+	min-height: 60px;
 }
 .about-me__introduction {
 	font-family: 'Spectral';
 	font-weight: 800;
 	font-style: italic;
 	min-height: 2em; /* Ajustez en fonction du contenu attendu */
+	font-size: 30px;
 }
 #about-me p {
 	width: 80%;
-	font-size: 22px;
+	font-size: 24px;
+	min-height: 80px;
 }
 
 
 .title{
 	text-align: center;
-	padding-block: 2em;
+	padding-block: 1em;
 	font-size: 40px;
 }
 .gallery .nav {
@@ -105,7 +110,7 @@ body {
 }
 .nav-pills .nav-link {
 	color: #000;
-	font-size: 20px;
+	font-size: 22px;
 }
 .item-column {
 	position: relative;
