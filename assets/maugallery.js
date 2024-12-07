@@ -126,37 +126,16 @@
           activeImage = $(this);
         }
       });
-      let activeTag = $(".tags-bar span.active-tag").data("images-toggle");
       let imagesCollection = [];
-      if (activeTag === "all") {
-        $(".item-column").each(function() {
-          if ($(this).children("img").length) {
-            imagesCollection.push($(this).children("img"));
-          }
-        });
-      } else {
-        $(".item-column").each(function() {
-          if (
-            $(this)
-              .children("img")
-              .data("gallery-tag") === activeTag
-          ) {
-            imagesCollection.push($(this).children("img"));
-          }
-        });
-      }
-      let index = 0,
-        next = null;
-
-      $(imagesCollection).each(function(i) {
-        if ($(activeImage).attr("src") === $(this).attr("src")) {
-          index = i ;
-        }
+      $(".gallery-item").each(function() {
+        imagesCollection.push($(this));
       });
-      next =
-        imagesCollection[index] ||
-        imagesCollection[imagesCollection.length - 1];
-      $(".lightboxImage").attr("src", $(next).attr("src"));
+
+      let index = imagesCollection.findIndex(
+        (img) => img.attr("src") === activeImage.attr("src")
+      );
+      index = (index - 1 + imagesCollection.length) % imagesCollection.length;
+      $(".lightboxImage").attr("src", imagesCollection[index].attr("src"));
     },
     nextImage() {
       let activeImage = null;
@@ -165,35 +144,16 @@
           activeImage = $(this);
         }
       });
-      let activeTag = $(".tags-bar span.active-tag").data("images-toggle");
       let imagesCollection = [];
-      if (activeTag === "all") {
-        $(".item-column").each(function() {
-          if ($(this).children("img").length) {
-            imagesCollection.push($(this).children("img"));
-          }
-        });
-      } else {
-        $(".item-column").each(function() {
-          if (
-            $(this)
-              .children("img")
-              .data("gallery-tag") === activeTag
-          ) {
-            imagesCollection.push($(this).children("img"));
-          }
-        });
-      }
-      let index = 0,
-        next = null;
-
-      $(imagesCollection).each(function(i) {
-        if ($(activeImage).attr("src") === $(this).attr("src")) {
-          index = i;
-        }
+      $(".gallery-item").each(function() {
+        imagesCollection.push($(this));
       });
-      next = imagesCollection[index] || imagesCollection[0];
-      $(".lightboxImage").attr("src", $(next).attr("src"));
+
+      let index = imagesCollection.findIndex(
+        (img) => img.attr("src") === activeImage.attr("src")
+      );
+      index = (index + 1) % imagesCollection.length;
+      $(".lightboxImage").attr("src", imagesCollection[index].attr("src"));
     },
     createLightBox(gallery, lightboxId, navigation) {
       gallery.append(`<div class="modal fade" id="${
@@ -204,14 +164,14 @@
                         <div class="modal-body">
                             ${
                               navigation
-                                ? '<div class="mg-prev" style="cursor:pointer;position:absolute;top:50%;left:-15px;background:white;"><</div>'
-                                : '<span style="display:none;" />'
+                                ? '<div class="mg-prev" style="cursor:pointer;position:absolute;top:50%;left:-15px;background:white;">&lt;</div>'
+                                : ""
                             }
-                            <img class="lightboxImage img-fluid" alt="Contenu de l'image affichée dans la modale au clique"/>
+                            <img class="lightboxImage img-fluid" alt="Image affichée dans la modale" />
                             ${
                               navigation
-                                ? '<div class="mg-next" style="cursor:pointer;position:absolute;top:50%;right:-15px;background:white;}">></div>'
-                                : '<span style="display:none;" />'
+                                ? '<div class="mg-next" style="cursor:pointer;position:absolute;top:50%;right:-15px;background:white;">&gt;</div>'
+                                : ""
                             }
                         </div>
                     </div>
@@ -261,3 +221,4 @@
     }
   };
 })(jQuery);
+
